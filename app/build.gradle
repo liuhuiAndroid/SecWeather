@@ -88,6 +88,7 @@ dependencies {
 
     // OkHttp:https://github.com/square/okhttp
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
 
     // Room
     def roomVersion = "2.4.2"
@@ -95,4 +96,7 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
+
+    // timber:https://github.com/JakeWharton/timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
 }
