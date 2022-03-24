@@ -1,13 +1,19 @@
 package com.sec.weather.repository
 
-import com.sec.weather.data.AstronomySun
-import com.sec.weather.data.DataOrException
-import com.sec.weather.data.Weather3d
-import com.sec.weather.data.WeatherNow
+import com.sec.weather.data.*
 import com.sec.weather.network.WeatherApi
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(private val api: WeatherApi) {
+
+    suspend fun getCityLookup(location: String): DataOrException<CityLookup, Exception> {
+        val response = try {
+            api.cityLookup(location = location)
+        } catch (e: Exception) {
+            return DataOrException(exception = e)
+        }
+        return DataOrException(data = response)
+    }
 
     suspend fun getWeatherNow(location: String): DataOrException<WeatherNow, Exception> {
         val response = try {

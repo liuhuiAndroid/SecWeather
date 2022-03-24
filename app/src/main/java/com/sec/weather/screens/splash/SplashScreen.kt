@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.sec.weather.R
 import com.sec.weather.navigation.WeatherScreens
+import com.sec.weather.utils.Constants
 import kotlinx.coroutines.delay
 
 @Composable
@@ -44,7 +45,7 @@ fun SplashScreen(navController: NavHostController) {
             )
         )
         delay(1200L)
-        navController.navigate(WeatherScreens.MainScreen.name)
+        navController.navigate("${WeatherScreens.MainScreen.name}/${Constants.DEFAULT_CITY_LOCATION}/${Constants.DEFAULT_CITY_NAME}")
     })
     Surface(
         modifier = Modifier

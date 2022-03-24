@@ -1,6 +1,7 @@
 package com.sec.weather.network
 
 import com.sec.weather.data.AstronomySun
+import com.sec.weather.data.CityLookup
 import com.sec.weather.data.Weather3d
 import com.sec.weather.data.WeatherNow
 import com.sec.weather.utils.Constants
@@ -11,6 +12,15 @@ import javax.inject.Singleton
 
 @Singleton
 interface WeatherApi {
+
+    /**
+     * 城市信息查询
+     */
+    @GET(value = "https://geoapi.qweather.com/v2/city/lookup")
+    suspend fun cityLookup(
+        @Query("location") location: String,
+        @Query("key") key: String = Constants.API_KEY
+    ): CityLookup
 
     /**
      * 实时天气

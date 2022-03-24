@@ -1,10 +1,7 @@
 package com.sec.weather.screens.main
 
 import androidx.lifecycle.ViewModel
-import com.sec.weather.data.AstronomySun
-import com.sec.weather.data.DataOrException
-import com.sec.weather.data.Weather3d
-import com.sec.weather.data.WeatherNow
+import com.sec.weather.data.*
 import com.sec.weather.repository.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

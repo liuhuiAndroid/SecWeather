@@ -20,6 +20,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.sec.weather.R
 import com.sec.weather.data.*
+import com.sec.weather.navigation.WeatherScreens
 import com.sec.weather.utils.Constants
 import com.sec.weather.utils.IconUtils
 import com.sec.weather.utils.TimeUtils
@@ -30,22 +31,25 @@ import com.sec.weather.widgets.WeatherStateImage
 @Composable
 fun MainScreen(
     navController: NavHostController,
-    mainViewModel: MainViewModel = hiltViewModel()
+    mainViewModel: MainViewModel = hiltViewModel(),
+    cityId: String,
+    cityName: String
 ) {
+    val curCityId: String = if (cityId.isNullOrBlank()) Constants.DEFAULT_CITY_LOCATION else cityId
     val weatherNowData = produceState<DataOrException<WeatherNow, Exception>>(
         initialValue = DataOrException(loading = true),
         producer = {
-            value = mainViewModel.getWeatherNow(location = Constants.DEFAULT_CITY_LOCATION)
+            value = mainViewModel.getWeatherNow(location = curCityId)
         }).value
     val astronomySunData = produceState<DataOrException<AstronomySun, Exception>>(
         initialValue = DataOrException(loading = true),
         producer = {
-            value = mainViewModel.getAstronomySun(location = Constants.DEFAULT_CITY_LOCATION)
+            value = mainViewModel.getAstronomySun(location = curCityId)
         }).value
     val weather3dData = produceState<DataOrException<Weather3d, Exception>>(
         initialValue = DataOrException(loading = true),
         producer = {
-            value = mainViewModel.getWeather3d(location = Constants.DEFAULT_CITY_LOCATION)
+            value = mainViewModel.getWeather3d(location = curCityId)
         }).value
     if (weatherNowData.loading == true && astronomySunData.loading == true && weather3dData.loading == true) {
         CircularProgressIndicator()
@@ -54,7 +58,9 @@ fun MainScreen(
             navController = navController,
             weatherNowData = weatherNowData.data,
             astronomySunData = astronomySunData.data,
-            weather3dData = weather3dData.data
+            weather3dData = weather3dData.data,
+            cityId = cityId,
+            cityName = cityName
         )
     }
 }
@@ -64,13 +70,16 @@ fun MainScaffold(
     navController: NavHostController,
     weatherNowData: WeatherNow,
     astronomySunData: AstronomySun,
-    weather3dData: Weather3d
+    weather3dData: Weather3d,
+    cityId: String,
+    cityName: String
 ) {
     Scaffold(topBar = {
         WeatherAppBar(
-            title = "浦东天气",
+            title = cityName,
+            navController = navController,
             onAddActionClicked = {
-
+                navController.navigate(WeatherScreens.SearchScreen.name)
             },
             elevation = 5.dp
         )
