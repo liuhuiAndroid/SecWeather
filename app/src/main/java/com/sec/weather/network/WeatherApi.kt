@@ -1,9 +1,9 @@
 package com.sec.weather.network
 
-import com.sec.weather.data.AstronomySun
-import com.sec.weather.data.CityLookup
-import com.sec.weather.data.Weather3d
-import com.sec.weather.data.WeatherNow
+import com.sec.weather.model.AstronomySun
+import com.sec.weather.model.CityLookup
+import com.sec.weather.model.Weather3d
+import com.sec.weather.model.WeatherNow
 import com.sec.weather.utils.Constants
 import com.sec.weather.utils.TimeUtils
 import retrofit2.http.GET

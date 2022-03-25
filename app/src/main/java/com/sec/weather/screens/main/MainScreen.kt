@@ -20,6 +20,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.sec.weather.R
 import com.sec.weather.data.*
+import com.sec.weather.model.AstronomySun
+import com.sec.weather.model.Daily
+import com.sec.weather.model.Weather3d
+import com.sec.weather.model.WeatherNow
 import com.sec.weather.navigation.WeatherScreens
 import com.sec.weather.utils.Constants
 import com.sec.weather.utils.IconUtils
@@ -81,7 +85,8 @@ fun MainScaffold(
             onAddActionClicked = {
                 navController.navigate(WeatherScreens.SearchScreen.name)
             },
-            elevation = 5.dp
+            elevation = 5.dp,
+            cityId = cityId,
         )
     }) {
         MainContent(

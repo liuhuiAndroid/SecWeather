@@ -1,10 +1,15 @@
 package com.sec.weather.di
 
+import android.content.Context
+import androidx.room.Room
+import com.sec.weather.data.WeatherDao
+import com.sec.weather.data.WeatherDatabase
 import com.sec.weather.network.WeatherApi
 import com.sec.weather.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.Dispatcher
 import okhttp3.OkHttpClient
@@ -18,6 +23,23 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class AppModule {
+
+    @Singleton
+    @Provides
+    fun provideWeatherDao(weatherDatabase: WeatherDatabase): WeatherDao =
+        weatherDatabase.weatherDao()
+
+    @Singleton
+    @Provides
+    fun provideAppDatabase(@ApplicationContext context: Context): WeatherDatabase =
+        Room.databaseBuilder(
+            context,
+            WeatherDatabase::class.java,
+            "weather_database"
+        )
+            .fallbackToDestructiveMigration()
+            .build()
+
 
     @Provides
     @Singleton

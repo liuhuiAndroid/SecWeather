@@ -24,12 +24,13 @@ fun AboutScreen(navController: NavController) {
     Scaffold(topBar = {
         WeatherAppBar(
             title = "About",
+            navController = navController,
             icon = Icons.Default.ArrowBack,
             isMainScreen = false,
-            navController = navController
-        ) {
-            navController.popBackStack()
-        }
+            onButtonClicked = {
+                navController.popBackStack()
+            }
+        )
     }) {
         Surface(
             modifier = Modifier

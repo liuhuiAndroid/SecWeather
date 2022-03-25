@@ -1,4 +1,4 @@
-package com.sec.weather.data
+package com.sec.weather.model
 
 data class Weather3d(
     val code: String,

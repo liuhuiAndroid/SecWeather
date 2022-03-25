@@ -1,6 +1,10 @@
 package com.sec.weather.repository
 
 import com.sec.weather.data.*
+import com.sec.weather.model.AstronomySun
+import com.sec.weather.model.CityLookup
+import com.sec.weather.model.Weather3d
+import com.sec.weather.model.WeatherNow
 import com.sec.weather.network.WeatherApi
 import javax.inject.Inject
 

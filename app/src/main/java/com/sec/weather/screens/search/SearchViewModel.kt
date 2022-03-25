@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sec.weather.data.CityLookup
+import com.sec.weather.model.CityLookup
 import com.sec.weather.data.DataOrException
 import com.sec.weather.repository.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

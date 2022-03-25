@@ -1,4 +1,4 @@
-package com.sec.weather.data
+package com.sec.weather.model
 
 data class CityLookup(
     val code: String,

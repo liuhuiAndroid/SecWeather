@@ -22,7 +22,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.sec.weather.data.Location
+import com.sec.weather.model.Location
 import com.sec.weather.navigation.WeatherScreens
 import com.sec.weather.widgets.WeatherAppBar
 import com.sec.weather.widgets.WeatherCityRow
@@ -38,9 +38,10 @@ fun SearchScreen(
             navController = navController,
             icon = Icons.Default.ArrowBack,
             isMainScreen = false,
-        ) {
-            navController.popBackStack()
-        }
+            onButtonClicked = {
+                navController.popBackStack()
+            }
+        )
     }) {
         Surface {
             Column(

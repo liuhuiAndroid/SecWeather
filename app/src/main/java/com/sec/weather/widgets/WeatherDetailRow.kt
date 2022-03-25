@@ -18,7 +18,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import com.sec.weather.data.Daily
+import com.sec.weather.model.Daily
 import com.sec.weather.utils.IconUtils
 
 @Composable

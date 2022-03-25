@@ -1,4 +1,4 @@
-package com.sec.weather.data
+package com.sec.weather.model
 
 data class Refer(
     // 数据许可或版权声明，可能为空
