@@ -17,3 +17,4 @@ API文档：https://dev.qweather.com/docs/api
 
 高德定位SDK：https://lbs.amap.com/
 
+TODO：Navigation-animation、Accompanist-pager、Splashscreen
