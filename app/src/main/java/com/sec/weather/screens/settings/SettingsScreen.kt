@@ -15,7 +15,7 @@ import androidx.navigation.NavHostController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
-import com.sec.weather.widgets.WeatherAppBar
+import com.sec.weather.components.WeatherAppBar
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalPagerApi::class)

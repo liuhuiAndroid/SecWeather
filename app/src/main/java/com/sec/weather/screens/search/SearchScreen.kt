@@ -24,8 +24,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.sec.weather.model.Location
 import com.sec.weather.navigation.WeatherScreens
-import com.sec.weather.widgets.WeatherAppBar
-import com.sec.weather.widgets.WeatherCityRow
+import com.sec.weather.components.WeatherAppBar
+import com.sec.weather.components.WeatherCityRow
 
 @Composable
 fun SearchScreen(

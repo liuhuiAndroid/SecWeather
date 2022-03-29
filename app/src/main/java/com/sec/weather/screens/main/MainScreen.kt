@@ -28,9 +28,9 @@ import com.sec.weather.navigation.WeatherScreens
 import com.sec.weather.utils.Constants
 import com.sec.weather.utils.IconUtils
 import com.sec.weather.utils.TimeUtils
-import com.sec.weather.widgets.WeatherAppBar
-import com.sec.weather.widgets.WeatherDetailRow
-import com.sec.weather.widgets.WeatherStateImage
+import com.sec.weather.components.WeatherAppBar
+import com.sec.weather.components.WeatherDetailRow
+import com.sec.weather.components.WeatherStateImage
 
 @Composable
 fun MainScreen(

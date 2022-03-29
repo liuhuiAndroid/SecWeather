@@ -1,4 +1,4 @@
-package com.sec.weather.widgets
+package com.sec.weather.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

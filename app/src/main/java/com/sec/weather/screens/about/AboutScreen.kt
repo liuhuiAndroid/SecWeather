@@ -17,7 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavController
 import com.sec.weather.R
-import com.sec.weather.widgets.WeatherAppBar
+import com.sec.weather.components.WeatherAppBar
 
 @Composable
 fun AboutScreen(navController: NavController) {

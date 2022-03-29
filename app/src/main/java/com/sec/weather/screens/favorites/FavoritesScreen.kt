@@ -20,7 +20,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.sec.weather.model.Favorite
 import com.sec.weather.navigation.WeatherScreens
-import com.sec.weather.widgets.WeatherAppBar
+import com.sec.weather.components.WeatherAppBar
 
 @Composable
 fun FavoritesScreen(

@@ -1,4 +1,4 @@
-package com.sec.weather.widgets
+package com.sec.weather.components
 
 import android.content.Context
 import android.widget.Toast
