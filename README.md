@@ -22,3 +22,8 @@ TODO：Navigation-animation、Accompanist-pager、Splashscreen
 ##### Compose知识
 
 Compose独立于Android
+
+
+         MD5:  F4:86:33:3A:DE:9D:60:CA:7D:C5:E5:41:66:EE:E1:84
+         SHA1: DA:B8:F0:30:3A:A3:CA:5F:07:F5:E5:37:27:C1:6D:DA:BF:90:E5:8B
+         SHA256: 65:AC:7A:8F:D0:70:50:6F:90:B6:2D:C4:EF:1D:BD:EA:24:33:A0:87:36:46:40:B4:F8:FD:F2:00:43:46:34:C8
